@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples say_aloha("Allison")
-say_aloha <- function(name) {
+say_aloha <- function(name, color) {
 
   message <- paste("Aloha,",
                    name,
@@ -17,4 +17,12 @@ say_aloha <- function(name) {
                    emo::ji("ocean"))
 
   cat(crayon::bgCyan(message))
-}
+=======
+  if (color == "blue"){
+    cat(crayon::bgBlue(message))
+  }
+  else if (color == "green"){
+    cat(crayon::bgGreen(message))
+  }
+
+
